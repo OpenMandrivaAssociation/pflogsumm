@@ -11,6 +11,7 @@ Group:		Monitoring
 Source:		http://jimsun.LinxNet.com/downloads/pflogsumm-%{version}.tar.bz2
 Patch0:		pflogsumm-conn-delays-dsn-patch
 Url:		http://jimsun.LinxNet.com/
+Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 Buildarch:	noarch
 
 %description
