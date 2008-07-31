@@ -1,6 +1,6 @@
 %define	name pflogsumm
 %define	version	1.1.0
-%define	release	%mkrel 6
+%define	release	%mkrel 7
 
 Summary: 	Postfix Log Entry Summarizer
 Name: 		%{name}
