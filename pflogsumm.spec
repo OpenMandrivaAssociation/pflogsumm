@@ -1,6 +1,6 @@
 %define	name pflogsumm
-%define	version	1.1.0
-%define	release	%mkrel 9
+%define	version	1.1.5
+%define	release	1
 
 Summary: 	Postfix Log Entry Summarizer
 Name: 		%{name}
@@ -8,10 +8,8 @@ Version: 	%{version}
 Release:	%{release}
 License: 	GPL
 Group:		Monitoring
-Source:		http://jimsun.LinxNet.com/downloads/pflogsumm-%{version}.tar.bz2
-Patch0:		pflogsumm-conn-delays-dsn-patch
+Source0:	http://jimsun.LinxNet.com/downloads/pflogsumm-%{version}.tar.gz
 Url:		http://jimsun.LinxNet.com/
-Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 Buildarch:	noarch
 
 %description
@@ -25,17 +23,12 @@ warnings, errors and panics.
 
 %prep
 %setup -q
-%patch0
 
 %install
-rm -rf $RPM_BUILD_ROOT
 mkdir -p %buildroot/%{_sbindir}
 mkdir -p %buildroot/%{_mandir}/man1
 install -m755 pflogsumm.pl %buildroot/%{_sbindir}/pflogsumm
 install -m644 pflogsumm.1 %buildroot/%{_mandir}/man1/pflogsumm.1
-
-%clean 
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,755)
