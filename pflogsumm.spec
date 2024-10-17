@@ -9,7 +9,7 @@ Release:	%{release}
 License: 	GPL
 Group:		Monitoring
 Source0:	http://jimsun.LinxNet.com/downloads/pflogsumm-%{version}.tar.gz
-Url:		http://jimsun.LinxNet.com/
+Url:		https://jimsun.LinxNet.com/
 Buildarch:	noarch
 
 %description
